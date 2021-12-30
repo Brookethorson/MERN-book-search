@@ -13,6 +13,7 @@ export const ADD_USER = gql`
   }
 `;
 
+// Creates a GraphQL mutation login query
 export const LOGIN_USER = gql`
   mutation loginUser($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -46,7 +47,7 @@ export const SAVE_BOOK = gql`
   }
 `;
 
-// Creates a GraphQL mutation removeBook query and deletes a book from the database
+// Creates a GraphQL mutation removeBook query deletes a book from the database
 export const REMOVE_BOOK = gql`
   mutation removeBook($bookId: ID!) {
     removeBook(bookId: $bookId) {
